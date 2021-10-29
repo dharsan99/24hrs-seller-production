@@ -1,5 +1,5 @@
 {
-	"appId": "com.24hrs.seller",
+	"appId": "io.ionic.starter",
 	"appName": "seller-app",
 	"webDir": "www",
 	"bundledWebRuntime": false
