@@ -29,3 +29,20 @@ ion-menu-button:hover{
 .row{
     margin-bottom: 8px;
 }
+
+#sideMenuList .active{
+    color: #FF6000;
+    font-weight: 700;
+}
+ion-content {
+    background-color:#fff !important;
+    // background: linear-gradient(to bottom, darkturquoise
+    // 0%, #d1f2e7
+    // 100%) !important;
+    --offset-bottom: auto!important;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+  }

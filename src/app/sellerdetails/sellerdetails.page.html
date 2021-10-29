@@ -1,5 +1,16 @@
-<ion-content class="mt-5">
+<ion-content class="mt-2">
   <div class="myproduct-div mt-5 ">
+
+    <div class="row">
+      <div class="col-7">
+        <ion-icon (click)="navigateHome()" style="margin:20px;cursor:pointer;color:#FF6000" name="close"></ion-icon>
+
+      </div>
+      <div class="col-5 ion-text-center">
+        <img id="logo" height="100px" width="120px" src="assets/logo.jpeg" alt="">
+      </div>
+
+    </div>
     <p style="font-size:20px;margin-left:10px;margin-top:10px; color: #5C5C5C;"> Provide Your Details:</p>
 
     <div class="row" style="padding-left: 10px;">
@@ -8,7 +19,7 @@
       </div>
       <div class="col-6">
         <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_GZxjzF.json" background="transparent"
-          speed="1.5" style="width:50%;margin-left:5px;" loop autoplay></lottie-player>
+          speed="1.5" style="width:40%;margin-left:5px;" loop autoplay></lottie-player>
       </div>
     </div>
 
@@ -34,7 +45,7 @@
 
     <div class="row" style="padding-left: 10px;">
       <div class="col-6">
-        <p class="edit-name">Contact Person Name:</p>
+        <p class="edit-name">User Name:</p>
       </div>
       <div class="col-6">
         <input type="text" id="edit-field" value="Ravi">
@@ -43,7 +54,7 @@
 
     <div class="row" style="padding-left: 10px;">
       <div class="col-6">
-        <p class="edit-name">Contact Person Number:</p>
+        <p class="edit-name">User Number:</p>
       </div>
       <div class="col-6">
         <input type="text" id="edit-field" value="9876543210">
@@ -55,20 +66,28 @@
         <p class="edit-name">Id Proff:</p>
       </div>
       <div class="col-6">
-        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_tf6wSv.json" background="transparent"
+        <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_0pkhkmwj.json" background="transparent"
           speed="1.5" style="width:50%;margin-left:5px;" loop autoplay></lottie-player>
       </div>
     </div>
 
     <div class="row" style="padding-left: 10px;">
       <div class="col-6">
-        <p class="edit-name">Address Proff</p>
+        <p class="edit-name">Address Proff:</p>
       </div>
       <div class="col-6">
-        <input type="text" id="edit-field" value="9876543210">
+        <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_jxgqawba.json" background="transparent"
+          speed="1.5" style="width:50%;margin-left:5px;" loop autoplay></lottie-player>
       </div>
     </div>
-    
 
-</div>
+    <div class="row ">
+       <div class="col-7">
+        <button (click)="navigateHome()" type="button" class="btn btn-success btn-sm skip-btn">Skip</button>
+       </div>
+       <div class="col-5">
+        <button (click)="navigateHome()" type="button" class="btn btn-success btn-sm update-btn">Submit</button>
+      </div>
+    </div>
+  </div>
 </ion-content>

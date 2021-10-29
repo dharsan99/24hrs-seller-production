@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-5">
         <!-- <img  id="logo"  src="assets/logo.jpeg" alt=""> -->
-        <h3 style="color:#fff;margin-top:25px">24HRS</h3>
+        <h5 style="color:#fff;margin-top:30px">24HRS</h5>
       </div>
       <div class="col-7" style="text-align: right;width: 90%;margin-top: -40px;">
         <svg style="margin:5px;text-align:right" width="16" height="20" viewBox="0 0 16 20" fill="none"
@@ -40,11 +40,10 @@
         <img
           src="https://www.jadefontenotdds.com/site/wp-content/uploads/2019/02/92979836-stock-vector-profile-anonymous-face-icon-gray-silhouette-person-male-default-avatar-photo-placeholder-isolated-on.jpg"
           alt="">
-
       </div>
-      <div class="col-8 mt-4">
+      <div class="col-8" style="margin-top: 8%;">
         <h5 style=" color: #5C5C5C;"> <b>abc store
-            <svg id="edit" style="margin: 5px;" (click)="showMyContainer=!showMyContainer" width="20" height="15"
+            <svg id="edit" style="margin: 5px;" (click)="popupModelOpen()" width="20" height="15"
               viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M0 13.6571V16.5278C0 16.7923 0.244411 17 0.555478 17H3.93279C4.07721 17 4.22164 16.9528 4.32162 16.8584L16.4533 6.55589L12.2872 3.01472L0.166644 13.3172C0.0555479 13.4116 0 13.5249 0 13.6571ZM19.675 3.81739C20.1083 3.4491 20.1083 2.85419 19.675 2.4859L17.0754 0.276212C16.6421 -0.0920705 15.9422 -0.0920705 15.509 0.276212L13.4759 2.0043L17.642 5.54548L19.675 3.81739Z"
@@ -62,103 +61,73 @@
         <p class="name">Username :</p>
       </div>
       <div class="col-6">
-        <p style="font-size: 12px;color:#5C5C5C">Ravi</p>
+        <input type="text" id="edit-field" disabled value="Ravi">
       </div>
 
       <div class="col-6">
         <p class="name">Email:</p>
       </div>
       <div class="col-6">
-        <p style="font-size: 12px; color:#5C5C5C">abc@gmail.com</p>
+        <input type="text" id="edit-field" disabled value="abc@gmail.com">
       </div>
 
       <div class="col-6">
         <p class="name">Mobile number :</p>
       </div>
       <div class="col-6">
-        <p style="font-size: 12px; color:#5C5C5C">7894563212</p>
+        <input type="text" id="edit-field" disabled value="5456456456456">
       </div>
 
       <div class="col-6">
-        <p class="name">Store Location :</p>
+        <p class="name">Store location :</p>
       </div>
       <div class="col-6">
-        <p style="font-size: 12px; color:#5C5C5C">Peelamedu</p>
+        <input type="text" id="edit-field" disabled value="Peelamedu">
+        <svg style="cursor:pointer" xmlns="http://www.w3.org/2000/svg" width="16" height="35" fill="#FF6000" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+        </svg>
+      </div>
+
+
+
+    <div class="row" style="padding-left: 10px;">
+      <div class="col-4">
+        <p class="name">Id Proof:</p>
+      </div>
+      <div class="col-3">
+        <img src="https://media.istockphoto.com/vectors/format-file-isolated-on-white-background-vector-id1226002079?b=1&k=20&m=1226002079&s=170667a&w=0&h=QyCTGPkTl8uZDjpFH8TJMYigtx2JmJW9EFCB-xFJ044=" alt="">
+      </div>
+      <div class="col-2">
+        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_uywti8w5.json" background="transparent"
+          speed="1.5" style="width:100%;margin-left:5px;" autoplay></lottie-player>
+      </div>
+      <div class="col-3 mt-4">
+        <ion-badge style="background-color: #FF6000;color:#fff">Upload Pdf</ion-badge>
       </div>
     </div>
 
-    <div class="hidden" *ngIf="showMyContainer">
-      <h5 style="margin:10px; color: #5C5C5C;"> <b>Edit Here:</b></h5>
-      <div class="row" style="padding-left: 10px;">
-        <div class="col-6">
-          <p class="edit-name">Mobile number :</p>
-        </div>
-        <div class="col-6">
-          <input type="text" id="edit-field" value="9876543210">
-        </div>
+    <div class="row" style="padding-left: 10px;">
+      <div class="col-4">
+        <p class="name">Address Proof:</p>
       </div>
-
-      <div class="row" style="padding-left: 10px;">
-        <div class="col-6">
-          <p class="edit-name">Email:</p>
-        </div>
-        <div class="col-6">
-          <input type="text" id="edit-field" value="abc@gmail.com">
-        </div>
+      <div class="col-3">
+        <img src="https://media.istockphoto.com/vectors/format-file-isolated-on-white-background-vector-id1226002079?b=1&k=20&m=1226002079&s=170667a&w=0&h=QyCTGPkTl8uZDjpFH8TJMYigtx2JmJW9EFCB-xFJ044=" alt="">
       </div>
-
-      <div class="row" style="padding-left: 10px;">
-        <div class="col-6">
-          <p class="edit-name">Password:</p>
-        </div>
-        <div class="col-6">
-          <input type="text" id="edit-field" value="abc@123">
-        </div>
+      <div class="col-2">
+        <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_slGFhN.json" background="transparent"
+          speed="1.5" style="width:100%;margin-left:5px;" autoplay></lottie-player>
       </div>
-
-      <div class="row" style="padding-left: 10px;">
-        <div class="col-6">
-          <p class="edit-name">Store Location :</p>
-        </div>
-        <div class="col-6">
-          <input type="text" id="edit-field" value="Peelamedu">
-
-          <svg style="margin-left: -5px;margin-top:5px" width="30" height="36" viewBox="0 0 22 28" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_d_1176:710)">
-              <path
-                d="M17 6C17 4.4087 16.3679 2.88254 15.2426 1.75732C14.1174 0.632106 12.5913 0 11 0C9.4087 0 7.88258 0.632106 6.75736 1.75732C5.63214 2.88254 5 4.4087 5 6C5 10.5 11 17 11 17C11 17 17 10.5 17 6ZM9 6C9 5.60444 9.1173 5.21781 9.33706 4.88892C9.55682 4.56002 9.86918 4.3036 10.2346 4.15222C10.6001 4.00085 11.0022 3.96128 11.3902 4.03845C11.7781 4.11562 12.1345 4.30611 12.4142 4.58582C12.6939 4.86552 12.8844 5.2219 12.9616 5.60986C13.0387 5.99783 12.9991 6.39993 12.8478 6.76538C12.6964 7.13083 12.44 7.4432 12.1111 7.66296C11.7822 7.88273 11.3956 8 11 8C10.4701 7.99842 9.96227 7.78721 9.58754 7.41248C9.21281 7.03775 9.00158 6.52995 9 6ZM4 18V20H18V18H4Z"
-                fill="white" />
-              <path
-                d="M11 16.2471C10.8514 16.0761 10.6636 15.8562 10.4477 15.5953C9.89187 14.9237 9.15161 13.9828 8.41236 12.9047C7.67214 11.8252 6.93926 10.6173 6.39298 9.41093C5.84386 8.19829 5.5 7.02331 5.5 6C5.5 4.54131 6.07946 3.14233 7.11091 2.11088C8.14236 1.07943 9.5413 0.5 11 0.5C12.4587 0.5 13.8576 1.07943 14.8891 2.11088C15.9205 3.14233 16.5 4.54131 16.5 6C16.5 7.02331 16.1561 8.19829 15.607 9.41093C15.0607 10.6173 14.3279 11.8252 13.5876 12.9047C12.8484 13.9828 12.1081 14.9237 11.5523 15.5953C11.3364 15.8562 11.1486 16.0761 11 16.2471ZM8.5 6L8.5 6.00149C8.50198 6.66353 8.76585 7.29789 9.23398 7.76603C9.70212 8.23417 10.3365 8.49802 10.9985 8.5H11C11.4944 8.5 11.9778 8.35341 12.3889 8.0787C12.8001 7.80399 13.1205 7.41353 13.3097 6.95672C13.4989 6.49991 13.5484 5.99727 13.452 5.51232C13.3555 5.02737 13.1174 4.5819 12.7678 4.23226C12.4181 3.88263 11.9727 3.64452 11.4877 3.54806C11.0028 3.4516 10.5001 3.50105 10.0433 3.69028C9.58643 3.87952 9.196 4.20005 8.92132 4.61113C8.64663 5.02224 8.5 5.50553 8.5 6ZM17.5 19.5H4.5V18.5H17.5V19.5Z"
-                stroke="black" />
-            </g>
-            <defs>
-              <filter id="filter0_d_1176:710" x="0" y="0" width="22" height="28" filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                  result="hardAlpha" />
-                <feOffset dy="4" />
-                <feGaussianBlur stdDeviation="2" />
-                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1176:710" />
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1176:710" result="shape" />
-              </filter>
-            </defs>
-          </svg>
-
-        </div>
-      </div>
-
-      <div style="width: 100%; text-align: center;">
-        <button type="button" class="btn btn-success btn-sm update-btn">Update</button>
+      <div class="col-3 mt-4">
+        <ion-badge style="background-color: #FF6000;color:#fff">Upload Pdf</ion-badge>
       </div>
     </div>
+
+  
+
   </div>
-
+  </div>
   <div class="myproduct-div mt-4 ">
-    <p style="font-size:14px;margin-left:10px;margin-top:10px; color: #5C5C5C;">Select how customers can reach you :</p>
+    <p style="font-size:16px;margin-left:10px;margin-top:10px; color: #5C5C5C;">Select how customers can reach you :</p>
     <div class="row">
       <div class="col-2">
         <svg style="margin-left: 10px;" width="30" height="35" viewBox="0 0 38 37" fill="none"
@@ -189,7 +158,7 @@
         </svg>
       </div>
       <div class="col-6">
-        <p style="margin:4px;font-size: smaller;color:#5C5C5C;"> abcstore</p>
+        <p style="margin:4px;font-size: 15px;color:#5C5C5C;"> abcstore</p>
       </div>
       <div class="col-4">
         <ion-toggle color="danger"></ion-toggle>
@@ -219,7 +188,7 @@
 
       </div>
       <div class="col-6">
-        <p style="margin:4px;font-size: smaller;color:#5C5C5C;">9876543210</p>
+        <p style="margin:4px;font-size: 15px;color:#5C5C5C;">9876543210</p>
       </div>
       <div class="col-4">
         <ion-toggle checked color="danger"></ion-toggle>
@@ -250,7 +219,7 @@
 
       </div>
       <div class="col-6">
-        <p style="margin:4px;font-size: smaller;color:#5C5C5C;"> www.abc.com</p>
+        <p style="margin:4px;font-size: 15px;color:#5C5C5C;"> www.abc.com</p>
       </div>
       <div class="col-4">
         <ion-toggle checked color="danger"></ion-toggle>
@@ -271,14 +240,92 @@
 
       </div>
       <div class="col-6">
-        <p style="margin:4px;font-size: smaller; color:#5C5C5C;">98765 43210</p>
+        <p style="margin:4px;font-size: 15px; color:#5C5C5C;">98765 43210</p>
       </div>
       <div class="col-4">
         <ion-toggle checked color="danger"></ion-toggle>
       </div>
     </div>
+  </div>
 
+  <div class="card" *ngIf="PopupModel"  style="margin-top: 20px;"  id="card">
+    <div class="row"  id="modal">
 
+      <div class="hidden" >
+        <div class="col-12 ion-text-left " style="margin-top: 20px;">
+          <svg (click)="backToprivious()" style="margin-top:-8px;cursor:pointer" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FF6000" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg>
+        </div>
+        <h5 style="margin:10px; color: #5C5C5C;"> <b>Edit Here:</b></h5>
+        <div class="row" style="padding-left: 10px;">
+          <div class="col-6">
+            <p class="edit-name">Mobile number :</p>
+          </div>
+          <div class="col-6">
+            <input type="text" id="edit-field" value="9876543210">
+          </div>
+        </div>
+  
+        <div class="row" style="padding-left: 10px;">
+          <div class="col-6">
+            <p class="edit-name">Email:</p>
+          </div>
+          <div class="col-6">
+            <input type="text" id="edit-field" value="abc@gmail.com">
+          </div>
+        </div>
+  
+        <div class="row" style="padding-left: 10px;">
+          <div class="col-6">
+            <p class="edit-name">Password:</p>
+          </div>
+          <div class="col-6">
+            <input type="text" id="edit-field" value="abc@123">
+          </div>
+        </div>
+  
+        <div class="row" style="padding-left: 10px;">
+          <div class="col-6">
+            <p class="edit-name">Store Location :</p>
+          </div>
+          <div class="col-6">
+            <input type="text" id="edit-field" value="Peelamedu">
+  
+            <svg style="margin-left: -5px;margin-top:5px" width="30" height="36" viewBox="0 0 22 28" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_d_1176:710)">
+                <path
+                  d="M17 6C17 4.4087 16.3679 2.88254 15.2426 1.75732C14.1174 0.632106 12.5913 0 11 0C9.4087 0 7.88258 0.632106 6.75736 1.75732C5.63214 2.88254 5 4.4087 5 6C5 10.5 11 17 11 17C11 17 17 10.5 17 6ZM9 6C9 5.60444 9.1173 5.21781 9.33706 4.88892C9.55682 4.56002 9.86918 4.3036 10.2346 4.15222C10.6001 4.00085 11.0022 3.96128 11.3902 4.03845C11.7781 4.11562 12.1345 4.30611 12.4142 4.58582C12.6939 4.86552 12.8844 5.2219 12.9616 5.60986C13.0387 5.99783 12.9991 6.39993 12.8478 6.76538C12.6964 7.13083 12.44 7.4432 12.1111 7.66296C11.7822 7.88273 11.3956 8 11 8C10.4701 7.99842 9.96227 7.78721 9.58754 7.41248C9.21281 7.03775 9.00158 6.52995 9 6ZM4 18V20H18V18H4Z"
+                  fill="white" />
+                <path
+                  d="M11 16.2471C10.8514 16.0761 10.6636 15.8562 10.4477 15.5953C9.89187 14.9237 9.15161 13.9828 8.41236 12.9047C7.67214 11.8252 6.93926 10.6173 6.39298 9.41093C5.84386 8.19829 5.5 7.02331 5.5 6C5.5 4.54131 6.07946 3.14233 7.11091 2.11088C8.14236 1.07943 9.5413 0.5 11 0.5C12.4587 0.5 13.8576 1.07943 14.8891 2.11088C15.9205 3.14233 16.5 4.54131 16.5 6C16.5 7.02331 16.1561 8.19829 15.607 9.41093C15.0607 10.6173 14.3279 11.8252 13.5876 12.9047C12.8484 13.9828 12.1081 14.9237 11.5523 15.5953C11.3364 15.8562 11.1486 16.0761 11 16.2471ZM8.5 6L8.5 6.00149C8.50198 6.66353 8.76585 7.29789 9.23398 7.76603C9.70212 8.23417 10.3365 8.49802 10.9985 8.5H11C11.4944 8.5 11.9778 8.35341 12.3889 8.0787C12.8001 7.80399 13.1205 7.41353 13.3097 6.95672C13.4989 6.49991 13.5484 5.99727 13.452 5.51232C13.3555 5.02737 13.1174 4.5819 12.7678 4.23226C12.4181 3.88263 11.9727 3.64452 11.4877 3.54806C11.0028 3.4516 10.5001 3.50105 10.0433 3.69028C9.58643 3.87952 9.196 4.20005 8.92132 4.61113C8.64663 5.02224 8.5 5.50553 8.5 6ZM17.5 19.5H4.5V18.5H17.5V19.5Z"
+                  stroke="black" />
+              </g>
+              <defs>
+                <filter id="filter0_d_1176:710" x="0" y="0" width="22" height="28" filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha" />
+                  <feOffset dy="4" />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1176:710" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1176:710" result="shape" />
+                </filter>
+              </defs>
+            </svg>
+  
+          </div>
+        </div>
+  
+        <div style="width: 100%; text-align: center;">
+          <button type="button" (click)="updateProfile()" class="btn btn-success btn-sm update-btn">Update</button>
+        </div>
+      </div>
+    </div>
 
+    
   </div>
 </ion-content>

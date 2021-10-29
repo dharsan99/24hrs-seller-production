@@ -46,6 +46,23 @@ export class SigninPage implements OnInit {
         })
 
         this.navigateTabs()
+      }else{
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+          }
+        })
+        
+        Toast.fire({
+          icon: 'error',
+          title: 'Please enter the valid email & password'
+        })
       }
     },(error: any) =>{
       console.log(error);
@@ -57,7 +74,7 @@ export class SigninPage implements OnInit {
   {
     this.signinemailid ='';
     this.signinpassword ='';
-    this.router.navigate(['/tabs'])
+    this.router.navigate(['/sellerpage'])
   }
 
   signupPage(){

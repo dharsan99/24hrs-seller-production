@@ -17,6 +17,10 @@ export class SupportPage implements OnInit {
     
   }
 
+  backToPrivious(){
+    this.router.navigate(['/tabs/tab5'])
+  }
+
   submit(){
     this.router.navigate(['/tabs'])
     

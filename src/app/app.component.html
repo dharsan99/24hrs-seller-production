@@ -1,34 +1,29 @@
-<ion-menu   side="start" type="push" contentId="main">
+<ion-menu swipeGesture="false"   side="start" type="push" contentId="main">
   <ion-toolbar>
     <div class="row mt-5">
-      <div class="col-4">
+      <div class="col-4 mt-2">
         <ion-menu-button style="display: table-row;" >
-          <ion-icon class="close"  name="close"></ion-icon>
+          <ion-icon style="margin-left: 20px;" class="close"  name="close"></ion-icon>
         </ion-menu-button>
       </div>
-      <div class="col-8" style="margin-left: -50px;">
-        <ion-menu-button style="display: table-row;" >
-          <img class="mx-5" height="100px" width="100" style="text-align: center;" src="assets/logo.jpeg" alt="">
-        </ion-menu-button>
-        
+      <div class="col-8 ion-text-center" style="margin-left: -90px;">
+          <img class="mx-5" height="110px" width="145" style="text-align: center;" src="assets/logo.jpeg" alt="">        
       </div>
     </div>
   </ion-toolbar>
 
 <ion-content >
   
-  <ion-list class="mt-4"  >
+  <ion-list id="sideMenuList" class="mt-4"  >
     <div class="row ">
       <div class="col-5">
-        <ion-menu-button style="display: table-row; margin-left: 25%;" >
           <ion-item>
-            <img  height="50px" (click)="home()" width="50px" src="assets/icon/home.PNG" alt="">
+            <img  height="50px"  width="50px" src="assets/icon/home.PNG" alt="">
           </ion-item>
-        </ion-menu-button>
       </div>
-      <div class="col-4" style="margin-left: -30px;">
+      <div class="col-4" style="margin-left: -15px;">
         <ion-menu-button style="display: table-row;" >
-          <p class="list" (click)="home()">Home</p> 
+          <p [class]="activeItem == 'home' ? 'active list': 'list' "  (click)="home()">Home</p> 
         </ion-menu-button>
         
       </div>
@@ -36,15 +31,13 @@
 
     <div class="row">
       <div class="col-5">
-        <ion-menu-button style="display: table-row;" >
           <ion-item>
-            <img  height="50px" (click)="myproducts()" width="50px" src="assets/icon/myproducts.png" alt="">
+            <img  height="50px"  width="50px" src="assets/icon/myproducts.png" alt="">
           </ion-item>
-        </ion-menu-button>
       </div>
-      <div class="col-4" style="margin-left: -30px;">
+      <div class="col-4" style="margin-left: -15px;">
         <ion-menu-button style="display: table-row;" >
-          <p class="list"  (click)="myproducts()">My Products</p> 
+          <p [class]="activeItem == 'myproducts' ? 'active list': 'list' "  (click)="myproducts()">My Products</p> 
         </ion-menu-button>
        
       </div>
@@ -52,15 +45,13 @@
 
     <div class="row">
       <div class="col-5">
-        <ion-menu-button style="display: table-row;" >
           <ion-item>
-            <img  height="50px" (click)="promotion()" width="50px" src="assets/icon/promotion.png" alt="">
+            <img  height="50px"  width="50px" src="assets/icon/promotion.png" alt="">
           </ion-item>
-        </ion-menu-button>
       </div>
-      <div class="col-4" style="margin-left: -30px;">
+      <div class="col-4" style="margin-left: -15px;">
         <ion-menu-button style="display: table-row;" >
-          <p class="list"  (click)="promotion()">Promotion</p>
+          <p [class]="activeItem == 'promotion' ? 'active list': 'list' "  (click)="promotion()">Promotion</p>
         </ion-menu-button>
          
       </div>
@@ -68,15 +59,13 @@
       
     <div class="row">
       <div class="col-5">
-        <ion-menu-button style="display: table-row;" >
           <ion-item>
-            <img  height="50px" (click)="Offers()" width="50px" src="assets/icon/offers.png" alt="">
+            <img  height="50px"  width="50px" src="assets/icon/offers.png" alt="">
           </ion-item>
-        </ion-menu-button>
       </div>
-      <div class="col-4" style="margin-left: -30px;">
+      <div class="col-4" style="margin-left: -15px;">
         <ion-menu-button style="display: table-row;" >
-          <p class="list" (click)="Offers()">Offers</p>
+          <p [class]="activeItem == 'offers' ? 'active list': 'list' "(click)="Offers()">Offers</p>
         </ion-menu-button>
         
       </div>
@@ -84,15 +73,13 @@
 
     <div class="row">
       <div class="col-5">
-        <ion-menu-button style="display: table-row;" >
           <ion-item>
-            <img  height="50px" (click)="myprofile()" width="50px" src="assets/icon/myprofile.png" alt="">
+            <img  height="50px"  width="50px" src="assets/icon/myprofile.png" alt="">
           </ion-item>
-        </ion-menu-button>
       </div>
-      <div class="col-4" style="margin-left: -30px;">
+      <div class="col-4" style="margin-left: -15px;">
         <ion-menu-button style="display: table-row;" >
-          <p class="list"  (click)="myprofile()">My Profile</p> 
+          <p [class]="activeItem == 'myprofile' ? 'active list': 'list' "  (click)="myprofile()">My Profile</p> 
         </ion-menu-button>
        
       </div>
@@ -101,15 +88,13 @@
       
     <div class="row">
       <div class="col-5">
-        <ion-menu-button style="display: table-row;" >
           <ion-item>
-            <img  height="50px" (click)="support()" width="50px" src="assets/icon/support.png" alt="">
+            <img  height="50px"  width="50px" src="assets/icon/support.png" alt="">
           </ion-item>
-        </ion-menu-button>
       </div>
-      <div class="col-4" style="margin-left: -30px;">
+      <div class="col-4" style="margin-left: -15px;">
         <ion-menu-button style="display: table-row;" >
-          <p class="list"  (click)="support()">Support</p> 
+          <p [class]="activeItem == 'support' ? 'active list': 'list' "  (click)="support()">Support</p> 
         </ion-menu-button>
        
       </div>
@@ -117,16 +102,14 @@
 
     <div class="row">
       <div class="col-5">
-        <ion-menu-button style="display: table-row;" >
           <ion-item>
-            <img (click)="logout()" height="50px" (click)="logout()" width="50px" src="assets/icon/logout.png" alt="">
+            <img height="50px" width="50px" src="assets/icon/logout.png" alt="">
             
           </ion-item>
-        </ion-menu-button>
       </div>
-      <div class="col-4" style="margin-left: -25px;">
+      <div class="col-4" style="margin-left: -15px;">
         <ion-menu-button style="display: table-row;" >
-          <p style="cursor: pointer;" (click)="logout()" class="list">Log out </p>
+          <p [class]="activeItem == 'logout' ? 'active list': 'list' " style="cursor: pointer;" (click)="logout()" class="list">Log out </p>
         </ion-menu-button>
        
       </div>
@@ -140,4 +123,4 @@
 </ion-content>
 </ion-menu>
 
-<ion-router-outlet [swipeGesture]="false" id="main"></ion-router-outlet>
+<ion-router-outlet  id="main"></ion-router-outlet>

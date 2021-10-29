@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-5">
         <!-- <img  id="logo"  src="assets/logo.jpeg" alt=""> -->
-        <h3 style="color:#fff;margin-top:25px">24HRS</h3>
+        <h5 style="color:#fff;margin-top:30px">24HRS</h5>
       </div>
       <div class="col-7" style="text-align: right;width: 90%;margin-top: -40px;">
         
@@ -23,20 +23,20 @@
 
 </ion-header>
 
-<ion-content class="bg-class" [fullscreen]="true">
+<ion-content class="bg-class" [fullscreen]="true" >
   <div class="container">
     <div class="signin-div mt-3 ">
       <h5 style="text-align: center; color:#676767"><b>Welcome back abc store!</b></h5>
       <div class="row">
         <div class="col-6 ">
           <span class="dot">
-            <p class="count">4</p>
+            <p class="count"><b>4</b></p>
           </span>
           <p class="views">offers</p>
         </div>
         <div class="col-6">
           <span class="dot">
-            <p class="count">47</p>
+            <p class="count"><b>47</b></p>
           </span>
           <p class="views"> views</p>
         </div>
@@ -80,13 +80,13 @@
           <ion-icon style="color:#FF6000;" name="close-circle"></ion-icon>
         </ion-chip> -->
         
-        <!-- <ion-chip *ngFor="let list of listOfCat" style="color:#FF6000;background-color: #FFC5A3;">
-          <ion-label>{{list.category}} <span style="color:red">{{list.status}}</span></ion-label>
+        <ion-chip *ngFor="let list of listOfCat" style="color:#FF6000;background-color: #fffcfa;">
+          <ion-label>{{list.category}} <span style="color:#FF6000">({{list.status}})</span></ion-label>
          
-        </ion-chip> -->
+        </ion-chip>
 
 
-       
+<!--        
           <div *ngFor="let list of listOfCat" class="row">
             <div class="col-12">
               <div class=" card">
@@ -100,7 +100,8 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
+
 <!-- <div class="row">
             <div class="col-12">
               <div class=" card">

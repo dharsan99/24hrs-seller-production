@@ -3,18 +3,18 @@
 <ion-content class="bg-class" >
 <div class="container" >
   <div class="row title">
-    <div class="col-4">
-      <img  src="assets/logo.jpeg" alt="">
+    <div class="col-12 ion-text-center">
+      <img id="logo" height="125px" width="150px" src="assets/logo.jpeg" alt="">
     </div>
      
         
-    <div class="col-8">
-      <span class="welcome">Welcome to</span>
+    <div class="col-12 ion-text-center">
+      <span class="welcome">Welcome to</span> <br>
       <span class="seller"><b>24hrs Seller</b></span>
     </div>
   </div>
 
-  <div class="signin-div mt-5 ">
+  <div class="signin-div mt-4 ">
     <div class="row "style="padding:15px;">
       <div class="col-6 signin">
         Sign in
@@ -23,7 +23,7 @@
         Sign up
       </div>
     </div>
-    <p class="signin-seller"><b>Sign in to 24hrs Seller</b></p>
+    <p class="signin-seller"><b>Sign in to  24hrs Seller</b></p>
     <p class="emailTo-continue">Enter email & password to continue</p>
 
     <div class="input-field" >
@@ -44,12 +44,14 @@
       <div class="col-6 forgot-pw">
         Forgot password?
       </div>
-      <div class="col-4">
-        <button (click)="signin()" class="btn btn-success btn-sm signin-btn mt-1">SIGNIN</button>
+      <div class="col-4 ">
+        <button  (click)="signin()" class="btn btn-success btn-sm signin-btn mt-1">SIGNIN</button>
       </div>
     </div>
 
-   
+    <div (click)="scrollToTop()" class="scroll-to-top" *ngIf="pageYoffset > 0" >
+      scrollToTop 
+   </div>
   </div>
 </div>
 </ion-content>

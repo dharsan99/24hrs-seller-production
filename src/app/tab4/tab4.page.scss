@@ -6,7 +6,7 @@
     background-color: #fff;
     border:1px solid #bfbfbf;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px #ccc;
+    box-shadow: 2px 2px 2px 2px #ccc !important;
     width:96% !important;
     margin:5px;
   }
@@ -90,7 +90,16 @@ input:focus {
 #edit{
   cursor: pointer;
 }
-
+.myproduct-div{
+  position: absolute;
+  background-color: #fff;
+  border:1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px #ebe6e6;
+  width:96% !important;
+  margin:5px;
+  
+}
 ion-content {
   background-color:#fff !important;
   // background: linear-gradient(to bottom, darkturquoise

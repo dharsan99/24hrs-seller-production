@@ -3,9 +3,9 @@
 .dot {
     margin:15px;
     margin-top: 0 !important;
-    height: 80px;
-    width: 70%;
-    background-color: #FFC5A3
+    height: 60%;
+    width: 75%;
+    background-color: #fffcfa
     ;
     border-radius: 50%;
     display: inline-block;
@@ -64,6 +64,9 @@
     box-shadow: 0 0 3px #ccc;
     border:1px solid #fff;
     
+  }
+  ion-chip{
+    box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 5.5);
   }
   ion-content {
     background-color:#fff !important;

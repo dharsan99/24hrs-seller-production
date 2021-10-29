@@ -15,15 +15,16 @@ export class Tab3Page {
   constructor(public popoverController: PopoverController, private router: Router, private http: HttpService,
     private toastCtrl: ToastController, route: ActivatedRoute) {
     route.params.subscribe(val => {
-      this.isHidden = true;
-      this.catPopup = false;
-      // put the code from `ngOnInit` here
+      
+      this.PopupModel = false;
+      
+      this.getCategoryList()
 
     });
   }
 
   ngOnInit() {
-    this.getcat()
+    
 
   }
 
@@ -34,10 +35,12 @@ export class Tab3Page {
   productname:any = '';
   description:any = '';
   cost:any = ''
-  categoryList: any = [];
-  isHidden: any = true;
-  catPopup: any = false;
   categoryName:any = '';
+  categoryList: any = [];
+
+
+  PopupModel: any = false;
+  
 
   async upload(ev: any) {
     const popover = await this.popoverController.create({
@@ -52,45 +55,33 @@ export class Tab3Page {
     console.log('onDidDismiss resolved with role', role);
   }
 
-  addproduct() {
-    this.router.navigate(['/myproducts'])
-  }
+  
  backToprivious(){
-  this.isHidden = true;
-  this.catPopup = false;
+  this.PopupModel = false;
+  this.Category = ''
+  
  }
+ addproduct() {
+  
+  this.router.navigate(['/myproducts'])
+}
   createCategory() {
-    this.isHidden = true;
-    this.catPopup = false;
+    this.PopupModel = false;
     const catData = {
-      category_name: this.Category,
+      category_name: this.categoryName,
       created_at: this.date
     }
 
-
-
     this.http.post('/create_category', catData).subscribe((response: any) => {
       console.log(response);
+      this.Category = ""
+      this.getCategoryList()
       if (response.success == "true") {
-        const Toast = Swal.mixin({
-          toast: true,
-          position: 'top-end',
-          showConfirmButton: false,
-          timer: 1000,
-          timerProgressBar: true,
-          didOpen: (toast) => {
-            toast.addEventListener('mouseenter', Swal.stopTimer)
-            toast.addEventListener('mouseleave', Swal.resumeTimer)
-          }
-        })
-
-        Toast.fire({
-          icon: 'success',
-          title: 'Signed in successfully'
-        })
-
-        this.addproduct()
+        console.log("test");
+        
+        
       }
+      
     }, (error: any) => {
       console.log(error);
     }
@@ -98,7 +89,7 @@ export class Tab3Page {
 
   }
 
-  getcat() {
+  getCategoryList() {
 
     this.http.get('/read_category',).subscribe((response: any) => {
 
@@ -111,11 +102,10 @@ export class Tab3Page {
     );
   }
 
-  card() {
+  popupModelOpen() {
     if (this.Category == "1") {
-      this.catPopup = true;
-      this.isHidden = false;
-      this.Category = ''
+      this.PopupModel = true;
+      this.Category = 'Select Your Category'
     }
 
   }
@@ -125,13 +115,13 @@ export class Tab3Page {
 
       const productData = {
         category: this.Category,
-        subcategory: this.date,
-        product_name: this.date,
-        description: this.date,
-        cost: this.date
+        subcategory: this.subcategory,
+        product_name: this.productname,
+        description: this.description,
+        cost: this.cost
       }
 
-      this.http.post('/create_category', productData).subscribe((response: any) => {
+      this.http.post('/update_product', productData).subscribe((response: any) => {
         console.log(response);
         if (response.success == "true") {
           const Toast = Swal.mixin({
@@ -159,5 +149,7 @@ export class Tab3Page {
       );
 
     }
+
+  
 
   }
