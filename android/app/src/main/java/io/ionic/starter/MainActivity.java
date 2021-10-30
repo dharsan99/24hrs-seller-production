@@ -1,4 +1,4 @@
-package com.seller.app;
+package com.hrsseller.app;
 
 import com.getcapacitor.BridgeActivity;
 
